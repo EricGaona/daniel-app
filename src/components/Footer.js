@@ -29,7 +29,7 @@ export default function Footer() {
                     <div className="flex-1 mx-auto py-4 text-base">
                         <h3 className="font-bold pb-3">Follow Us</h3>
                         <p className="text-gray-500 pb-4">Stay in touch with us</p>
-                        <ul className="flex justify-center mb-5">
+                        <ul className="flex justify-start mb-5">
                             <li>
                                 <a
                                     href="#"

@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
+import "./Header.css";
 import { useEffect } from "react";
+import Link from "next/link";
 export default function Header() {
     useEffect(() => {
 
@@ -44,7 +46,7 @@ export default function Header() {
                     />
                 </a>
                 <ul className="flex gap-4">
-                    <li className="py-5"><a href="#">Home</a></li>
+                    <li className="py-5"><Link href="/">Home</Link></li>
                     <li className="relative py-5" id="about">About
                         <ul className="absolute hidden bg-white dark:bg-black rounded shadow-lg w-32 left-1/2 -translate-x-1/2 top-14 divide-y divide-slate-200
                         before:absolute before:left-1/2 before:-translate-x-1/2 before:-top-2 before:border-solid before:border-b-white before:border-b-8 before:border-x-transparent 
@@ -55,15 +57,16 @@ export default function Header() {
                         </ul>
                     </li>
                     <li className="relative py-5" id="service">Services
-                        <ul className="absolute hidden bg-white dark:bg-black rounded shadow-lg w-32 left-1/2 -translate-x-1/2 top-14 divide-y divide-slate-200
-                        before:absolute before:left-1/2 before:-translate-x-1/2 before:-top-2 before:border-solid before:border-b-white before:border-b-8 before:border-x-transparent 
-                        before:border-x-8 before:border-t-0">
-                            <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">History</a></li>
-                            <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">Team</a></li>
-                            <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">Offices</a></li>
-                        </ul>
+                        <div className="relative">
+                            <ul className="absolute hidden bg-white rounded shadow-lg w-32 left-1/2 -translate-x-1/2 top-5 divide-y divide-slate-200">
+                                <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">History</a></li>
+                                <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">Team</a></li>
+                                <li><a className="hover:text-red-500 cursor-pointer px-4 py-2 block" href="#">Offices</a></li>
+                            </ul>
+                            <div className="triangle"></div>
+                        </div>
                     </li>
-                    <li className="py-5"><a href="#">Contact</a></li>
+                    <li className="py-5"><Link href="/contact">Contact</Link></li>
                     <li className="py-5"><a href="#">Blog</a></li>
 
                 </ul>
