@@ -9,27 +9,37 @@
   }
   
   #service:hover ul {
-    height: 125px;
+    height: 165px;
     visibility: visible;
   }
   
-  #service ul li {
+  #about:hover ul {
+    height: 125px;
+    visibility: visible;
+  }
+
+  #service ul li, #about ul li {
     display: block;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
+    background-color: black;
+    border-bottom: 1px solid gray;
     text-align: center;
+    margin-top: 0;
+  }
+
+  #service ul li:first-child, #about ul li:first-child {
+    border-top: 3px solid rgb(245 158 11 / var(--tw-bg-opacity, 1));
   }
   
-  #service .triangle {
+  #service .triangle, #about .triangle {
     visibility: hidden;
     transition: all 0.5s;
   }
   
-  #service:hover .triangle {
+  #service:hover .triangle, #about:hover .triangle {
     visibility: visible;
   }
   
-  #service .triangle::before {
+  #service .triangle::before, #about .triangle::before {
       content: '';
       position: absolute;
       top: 9px; /* Ajusta según el diseño */
@@ -37,6 +47,6 @@
       transform: translateX(-50%);
       border-width: 6px; /* Tamaño del triángulo */
       border-style: solid;
-      border-color: transparent transparent white transparent; /* Triángulo apuntando hacia arriba */
+      border-color: transparent transparent rgb(245 158 11 / var(--tw-bg-opacity, 1)) transparent; /* Triángulo apuntando hacia arriba */
       z-index: 10; /* Asegúrate de que se muestre sobre otros elementos */
   }
